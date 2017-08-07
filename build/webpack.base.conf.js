@@ -1,10 +1,13 @@
 const path = require('path')
 
 module.exports = {
-  entry: ['babel-polyfill', './app.js'],
+  entry: {
+    app: ['babel-polyfill', './app.js'] // 可扩展配置
+    // app: './app.js' // 可扩展配置
+  },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'bundle.js'
+    filename: '[chunkhash].[name].js'
   },
   module: {
     rules: [
@@ -22,6 +25,5 @@ module.exports = {
         }
       }
     ]
-  },
-  target: 'node'
+  }
 }
