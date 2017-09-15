@@ -18,6 +18,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     }),
     new HtmlWebpackPlugin({
       title: 'Webpack Demo',
+      template: 'index.html',
       filename: '../index.html'
     })
   ]
