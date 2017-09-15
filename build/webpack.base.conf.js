@@ -6,7 +6,7 @@ module.exports = {
     // app: './app.js' // 可扩展配置
   },
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, '../www/static'),
     filename: '[chunkhash].[name].js'
   },
   module: {

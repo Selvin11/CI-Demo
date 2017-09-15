@@ -7,7 +7,7 @@ var webpackConfig = require('./webpack.prod.conf')
 
 
 
-rm(path.resolve(__dirname, '../dist'), err => {
+rm(path.resolve(__dirname, '../www/static'), err => {
   if (err) throw err
   
   webpack(webpackConfig, function (err, stats) {

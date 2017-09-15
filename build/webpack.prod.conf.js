@@ -1,4 +1,5 @@
 var webpack = require('webpack')
+var path = require('path')
 var merge = require('webpack-merge')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var baseWebpackConfig = require('./webpack.base.conf')
@@ -19,7 +20,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       title: 'Webpack Demo',
       template: 'index.html',
-      filename: '../index.html'
+      filename: path.resolve(__dirname, '../www/index.html')
     })
   ]
 })
